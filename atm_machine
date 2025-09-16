@@ -20,9 +20,9 @@ Your choice: """
         elif user_input == "2":
             self.deposite()
         elif user_input == "3":
-            self.withdraw
+            self.withdraw()
         elif user_input == "4":
-            print("Balance")
+            self.check_balance()
         elif user_input == "5":
             print("Bye 👋")
         else:
@@ -50,5 +50,12 @@ def withdraw(self):
             print("Insufficient withdraw")
     else:
         print("Incorrect pin")
+
+def check_balance(self):
+    temp=input("Enter your pin")
+    if temp==self.pin:
+        print(self.balance)
+    else:
+        print("invalid pin")
 
 b=Atm()
