@@ -18,7 +18,7 @@ Your choice: """
         if user_input == "1":
            self.create_pin()
         elif user_input == "2":
-            print("Deposit")
+            self.deposite()
         elif user_input == "3":
             print("Withdraw")
         elif user_input == "4":
@@ -31,5 +31,11 @@ Your choice: """
 def create_pin(self):
     self.pin=input("Enter you pin")
     print("Pin set successfully")
+
+def deposite(self):
+    temp=input("Enter your pin")
+    if temp==self.pin:
+        amount=int(input("Enter the amount"))
+        self.balance=self.balance+amount
 
 b=Atm()
