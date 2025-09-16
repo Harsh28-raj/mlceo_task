@@ -16,9 +16,9 @@ Your choice: """
         )
 
         if user_input == "1":
-           self.create_pin()
+            self.create_pin()
         elif user_input == "2":
-            self.deposite()
+            self.deposit()
         elif user_input == "3":
             self.withdraw()
         elif user_input == "4":
@@ -28,34 +28,35 @@ Your choice: """
         else:
             print("Invalid option, try again.")
 
-def create_pin(self):
-    self.pin=input("Enter you pin")
-    print("Pin set successfully")
+    def create_pin(self):
+        self.pin=input("Enter your pin: ")
+        print("Pin set successfully")
 
-def deposite(self):
-    temp=input("Enter your pin")
-    if temp==self.pin:
-        amount=int(input("Enter the amount"))
-        self.balance=self.balance+amount
-    else:
-        print("Incorrect pin")
-def withdraw(self):
-    sue=input("Enter your pin")
-    if sue==self.pin:
-        amountwid=int(input("Enter the amount to withdraw"))
-        if amountwid<self.balance:
-           self.balance=self.balance-amountwid
-           print("Withdraw done")
+    def deposit(self):
+        temp=input("Enter your pin: ")
+        if temp==self.pin:
+            amount=int(input("Enter the amount: "))
+            self.balance=self.balance+amount
         else:
-            print("Insufficient withdraw")
-    else:
-        print("Incorrect pin")
+            print("Incorrect pin")
 
-def check_balance(self):
-    temp=input("Enter your pin")
-    if temp==self.pin:
-        print(self.balance)
-    else:
-        print("invalid pin")
+    def withdraw(self):
+        sue=input("Enter your pin: ")
+        if sue==self.pin:
+            amountwid=int(input("Enter the amount to withdraw: "))
+            if amountwid<self.balance:
+                self.balance=self.balance-amountwid
+                print("Withdraw done")
+            else:
+                print("Insufficient withdraw")
+        else:
+            print("Incorrect pin")
+
+    def check_balance(self):
+        temp=input("Enter your pin: ")
+        if temp==self.pin:
+            print(self.balance)
+        else:
+            print("invalid pin")
 
 b=Atm()
